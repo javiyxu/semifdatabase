@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/userController');
+const pizzaController = require('../controllers/pizzaController');
 
-// RESTful routes for users
-router.get('/users', userController.getAllUsers);
-router.get('/users/:id', userController.getUserById);
-router.post('/users', userController.createUser);
-router.put('/users/:id', userController.updateUser);
-router.delete('/users/:id', userController.deleteUser);
+router.get('/orders', pizzaController.getAllOrders);
+router.get('/orders/:id', pizzaController.getOrderById);
+router.post('/orders', pizzaController.createOrder);
+router.put('/orders/:id', pizzaController.updateOrder);
+router.delete('/orders/:id', pizzaController.deleteOrder);
 
 module.exports = router;
