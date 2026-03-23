@@ -1,20 +1,12 @@
-// pizzaRoutes.js
 const express = require('express');
 const router = express.Router();
-const pizzaController = require('../controllers/pizzaController');
-// Get all orders
-router.get('/orders', pizzaController.getAllOrders); 
+const userController = require('../controllers/userController');
 
-// Get order by ID
-router.get('/orders/:id', pizzaController.getOrderById);
-
-// Create new order
-router.post('/orders', pizzaController.createOrder);
-
-// Update an order
-router.put('/orders', pizzaController.updateOrder);
-
-// Delete an order
-router.delete('/orders', pizzaController.deleteOrder);
+// RESTful routes for users
+router.get('/users', userController.getAllUsers);
+router.get('/users/:id', userController.getUserById);
+router.post('/users', userController.createUser);
+router.put('/users/:id', userController.updateUser);
+router.delete('/users/:id', userController.deleteUser);
 
 module.exports = router;
