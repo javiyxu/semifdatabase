@@ -1,4 +1,4 @@
-const connection = require('../config/db'); // your MySQL connection
+const connection = require('../config/db');
 
 // Get all users
 exports.getAllUsers = (req, res) => {
