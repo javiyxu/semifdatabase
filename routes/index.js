@@ -1,20 +1,20 @@
+// pizzaRoutes.js
 const express = require('express');
 const router = express.Router();
-const pizzaController = require('../controllers/pizzaController');
+const pizzaController = require('../controllers/pizzaController').getAllOrders;
+// Get all orders
+router.get('/orders', pizzaController.getAllOrders); 
 
-// GET all orders
-router.get('/orders', pizzaController.getAllOrders);
-
-// GET order by ID
+// Get order by ID
 router.get('/orders/:id', pizzaController.getOrderById);
 
-// CREATE a new order
+// Create new order
 router.post('/orders', pizzaController.createOrder);
 
-// UPDATE an order
-router.put('/orders/:id', pizzaController.updateOrder);
+// Update an order
+router.put('/orders', pizzaController.updateOrder);
 
-// DELETE an order
-router.delete('/orders/:id', pizzaController.deleteOrder);
+// Delete an order
+router.delete('/orders', pizzaController.deleteOrder);
 
 module.exports = router;
