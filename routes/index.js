@@ -1,7 +1,7 @@
 // pizzaRoutes.js
 const express = require('express');
 const router = express.Router();
-const pizzaController = require('../controllers/pizzaController').getAllOrders;
+const pizzaController = require('../controllers/pizzaController');
 // Get all orders
 router.get('/orders', pizzaController.getAllOrders); 
 
